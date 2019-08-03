@@ -50,19 +50,26 @@ public class CharacterEvolution : MonoBehaviour
         EvolveState(CharacterState.UNBORN);
     }
 
-    public void Evolve ()
+    private bool playerIsOverlapping()
+    {
+        return Physics2D.Linecast(controller.m_FeetCheck.position, controller.m_HeadCheck.position, controller.m_WhatIsGround);
+    }
+
+	public void Evolve ()
     {
         if (currentState == CharacterState.DEAD)
         {
             return; // No next state
         }
-
         switch (currentState) {
             case CharacterState.UNBORN:
                 EvolveState(CharacterState.BABY);
                 break;
             case CharacterState.BABY:
-                EvolveState(CharacterState.ADULT);
+                if (playerIsOverlapping())
+                    EvolveState(CharacterState.DEAD);
+                else
+                    EvolveState(CharacterState.ADULT);
                 break;
             case CharacterState.ADULT:
                 EvolveState(CharacterState.OLD);
