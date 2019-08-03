@@ -7,10 +7,11 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController2D controller;
     //public Animator animator;
-    public float movingSpeed = 100f;
 
     float movingDirection = 0f;
     bool jump = false;
+
+	private float movingSpeed;
 
     public void onLanding()
     {
@@ -32,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
         //animator.SetFloat("lookingY", lookingDirection);
 
         //animator.SetFloat("speed", Mathf.Abs(movingDirection));
+    }
+
+    public void SetSpeed(float speed)
+    {
+        movingSpeed = speed;
     }
 
     private void FixedUpdate()

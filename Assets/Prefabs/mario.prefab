@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1602220670514305840}
   - component: {fileID: 1602220670514305871}
   - component: {fileID: 1602220670514305870}
+  - component: {fileID: 313922643}
   - component: {fileID: 1602220670514305869}
   - component: {fileID: 1602220670514305868}
   - component: {fileID: 1602220670514305842}
@@ -163,6 +164,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1602220670514305871}
   movingSpeed: 80
+--- !u!114 &313922643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602220670514305867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a00af4af4d34fe2899297363e3c6fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
 --- !u!61 &1602220670514305869
 BoxCollider2D:
   m_ObjectHideFlags: 0
