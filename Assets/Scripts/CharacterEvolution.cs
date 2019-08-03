@@ -92,6 +92,8 @@ public class CharacterEvolution : MonoBehaviour
             collider.enabled = true;
         }
 
+        Debug.Log("Evolving from " + currentState + "to" + nextState);
+
         // Change state
         currentState = nextState;
     }
