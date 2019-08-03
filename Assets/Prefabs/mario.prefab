@@ -184,7 +184,7 @@ MonoBehaviour:
   adultSpeed: 25
   oldSpeed: 15
   babyJumpForce: 0
-  adultJumpForce: 600
+  adultJumpForce: 800
   oldJumpForce: 500
   unbornSprite: {fileID: 21300000, guid: 02ec7d9448fe54a5cbfd45a44bd69c31, type: 3}
   babySprite: {fileID: 21300000, guid: 6003df2165e084cf1b3b0fdc1f90f854, type: 3}

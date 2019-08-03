@@ -6,6 +6,9 @@ public class LevelEnd : MonoBehaviour
 {
 
     public int itemsNeeded = 3;
+    public Sprite disabledSprite;
+    public Sprite enabledSprite;
+    public GameManager gm;
 
     public bool canFinish()
     {
@@ -15,5 +18,20 @@ public class LevelEnd : MonoBehaviour
     public void itemGrabed()
     {
         itemsNeeded--;
+    }
+
+    private void Start()
+    {
+        GetComponent<SpriteRenderer>().sprite = disabledSprite;
+    }
+
+    private void Update()
+    {
+        if (itemsNeeded == 0)
+        {
+            GetComponent<SpriteRenderer>().sprite = enabledSprite;
+            gm.OnLevelFinished();
+            itemsNeeded--; // to enter this bock once
+        }
     }
 }
