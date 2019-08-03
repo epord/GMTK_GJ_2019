@@ -27,12 +27,15 @@ public class Level1Manager : MonoBehaviour
         if (player.currentState == CharacterState.ADULT && initialArea.isPlayerInArea)
         {
             rKey.SetActive(true);
+        } else {
+            rKey.SetActive(false);
         }
-
 
         if (player.currentState == CharacterState.ADULT && secondArea.isPlayerInArea)
         {
             spaceKey.SetActive(true);
+        } else {
+            spaceKey.SetActive(false);
         }
 
     }

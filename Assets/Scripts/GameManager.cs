@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public CharacterEvolution character;
+    public CharacterEvolution player;
     public float babyTime = 10.0f;
     public float adultTime = 10.0f;
     public float oldTime = 10.0f;
@@ -28,9 +28,8 @@ public class GameManager : MonoBehaviour
         elapsedTime += Time.deltaTime;
         if (currentLifeIndex < lifeTimes.Length && elapsedTime > lifeTimes[currentLifeIndex])
         {
-            Debug.Log("Evolving " + elapsedTime + " " + currentLifeIndex);
             currentLifeIndex++;
-            character.Evolve();
+            player.Evolve();
         }
 
     }
