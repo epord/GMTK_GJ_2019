@@ -17,9 +17,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         lifeTimes = new float[] {babyTime, babyTime + adultTime, babyTime + adultTime + oldTime};
-        Debug.Log(lifeTimes[0]);
-        Debug.Log(lifeTimes[1]);
-        Debug.Log(lifeTimes[2]);
     }
 
 	// Update is called once per frame
