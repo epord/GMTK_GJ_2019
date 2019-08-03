@@ -22,16 +22,26 @@ public class CharacterEvolution : MonoBehaviour
     public float adultJumpForce = 550;
     public float oldJumpForce = 400;
 
+    public Sprite babySprite;
+    public Sprite adultSprite;
+    public Sprite oldSprite;
+    public Sprite deadSprite;
+
+    public Collider2D[] babyColliders;
+    public Collider2D[] adultColliders;
+    public Collider2D[] oldColliders;
+    public Collider2D[] deadColliders;
+
     public CharacterState currentState;
 
     private Dictionary<CharacterState, StateData> stateMap = new Dictionary<CharacterState, StateData>();
 
     void Start()
     {
-        stateMap.Add(CharacterState.BABY, new StateData(babySpeed, babyJumpForce));
-        stateMap.Add(CharacterState.ADULT, new StateData(adultSpeed, adultJumpForce));
-        stateMap.Add(CharacterState.OLD, new StateData(oldSpeed, oldJumpForce));
-        stateMap.Add(CharacterState.DEAD, new StateData(0, 0));
+        stateMap.Add(CharacterState.BABY, new StateData(babySpeed, babyJumpForce, babySprite, babyColliders));
+        stateMap.Add(CharacterState.ADULT, new StateData(adultSpeed, adultJumpForce, adultSprite, adultColliders));
+        stateMap.Add(CharacterState.OLD, new StateData(oldSpeed, oldJumpForce, oldSprite, oldColliders));
+        stateMap.Add(CharacterState.DEAD, new StateData(0, 0, deadSprite, deadColliders));
 
         EvolveState(CharacterState.BABY);
     }
@@ -58,10 +68,31 @@ public class CharacterEvolution : MonoBehaviour
     }
 
     private void EvolveState(CharacterState nextState) {
+        StateData currentStateData = stateMap[currentState];
+        StateData nextStateData = stateMap[nextState];
+
+        // Set new jumpForce
+        controller.SetJumpForce(nextStateData.jumpForce);
+
+        // Set new speed
+        playerMovement.SetSpeed(nextStateData.speed);
+
+        // Set new Sprite
+        GetComponent<SpriteRenderer>().sprite = nextStateData.sprite;
+
+        // Disable actual colliders
+        foreach (Collider2D collider in currentStateData.colliders)
+        {
+            collider.enabled = false;
+        }
+
+        // Enable new colliders
+        foreach (Collider2D collider in nextStateData.colliders)
+        {
+            collider.enabled = true;
+        }
+
+        // Change state
         currentState = nextState;
-        Debug.Log(nextState);
-        Debug.Log(stateMap[nextState].jumpForce);
-        controller.SetJumpForce(stateMap[nextState].jumpForce);
-        playerMovement.SetSpeed(stateMap[nextState].speed);
     }
 }
