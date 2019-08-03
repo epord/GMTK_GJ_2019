@@ -5,9 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public CharacterEvolution player;
+    public float unbornTime = 2.0f;
     public float babyTime = 10.0f;
     public float adultTime = 10.0f;
     public float oldTime = 10.0f;
+    public LevelEnd flag;
 
     private float[] lifeTimes = new float[3];
     private float elapsedTime = 0;
@@ -16,13 +18,19 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lifeTimes = new float[] {babyTime, babyTime + adultTime, babyTime + adultTime + oldTime};
+        lifeTimes = new float[] {
+            unbornTime,
+            unbornTime+ babyTime,
+            unbornTime + babyTime + adultTime,
+            unbornTime + babyTime + adultTime + oldTime
+        };
     }
 
 	// Update is called once per frame
 	void Update()
     {
-        elapsedTime += Time.deltaTime;
+		elapsedTime += Time.deltaTime;
+        
         if (currentLifeIndex < lifeTimes.Length && elapsedTime > lifeTimes[currentLifeIndex])
         {
             currentLifeIndex++;

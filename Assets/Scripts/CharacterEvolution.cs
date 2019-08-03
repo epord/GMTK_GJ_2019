@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum CharacterState {
-    BABY = 0,
+    UNBORN = 0,
+    BABY,
     ADULT,
     OLD,
     DEAD
@@ -22,11 +23,13 @@ public class CharacterEvolution : MonoBehaviour
     public float adultJumpForce = 550;
     public float oldJumpForce = 400;
 
+    public Sprite unbornSprite;
     public Sprite babySprite;
     public Sprite adultSprite;
     public Sprite oldSprite;
     public Sprite deadSprite;
 
+    public Collider2D[] unbornColliders;
     public Collider2D[] babyColliders;
     public Collider2D[] adultColliders;
     public Collider2D[] oldColliders;
@@ -38,12 +41,13 @@ public class CharacterEvolution : MonoBehaviour
 
     void Start()
     {
+        stateMap.Add(CharacterState.UNBORN, new StateData(0, 0, unbornSprite, unbornColliders));
         stateMap.Add(CharacterState.BABY, new StateData(babySpeed, babyJumpForce, babySprite, babyColliders));
         stateMap.Add(CharacterState.ADULT, new StateData(adultSpeed, adultJumpForce, adultSprite, adultColliders));
         stateMap.Add(CharacterState.OLD, new StateData(oldSpeed, oldJumpForce, oldSprite, oldColliders));
         stateMap.Add(CharacterState.DEAD, new StateData(0, 0, deadSprite, deadColliders));
 
-        EvolveState(CharacterState.BABY);
+        EvolveState(CharacterState.UNBORN);
     }
 
     public void Evolve ()
@@ -54,6 +58,9 @@ public class CharacterEvolution : MonoBehaviour
         }
 
         switch (currentState) {
+            case CharacterState.UNBORN:
+                EvolveState(CharacterState.BABY);
+                break;
             case CharacterState.BABY:
                 EvolveState(CharacterState.ADULT);
                 break;
