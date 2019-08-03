@@ -50,14 +50,15 @@ public class CharacterEvolution : MonoBehaviour
         EvolveState(CharacterState.UNBORN);
     }
 
-    public void Evolve ()
+    public void Evolve()
     {
         if (currentState == CharacterState.DEAD)
         {
             return; // No next state
         }
 
-        switch (currentState) {
+        switch (currentState)
+        {
             case CharacterState.UNBORN:
                 EvolveState(CharacterState.BABY);
                 break;
@@ -69,6 +70,28 @@ public class CharacterEvolution : MonoBehaviour
                 break;
             case CharacterState.OLD:
                 EvolveState(CharacterState.DEAD);
+                break;
+
+        }
+    }
+
+    public void Devolve()
+    {
+        if (currentState == CharacterState.DEAD)
+        {
+            return; // No next state
+        }
+
+        switch (currentState)
+        {
+            case CharacterState.BABY:
+                EvolveState(CharacterState.UNBORN);
+                break;
+            case CharacterState.ADULT:
+                EvolveState(CharacterState.BABY);
+                break;
+            case CharacterState.OLD:
+                EvolveState(CharacterState.ADULT);
                 break;
 
         }

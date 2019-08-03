@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,6 +38,22 @@ public class GameManager : MonoBehaviour
             player.Evolve();
         }
 
+    }
+
+    public void changeTime(float amount)
+    {
+        elapsedTime = Math.Max(elapsedTime + amount, 0);
+
+        // evolve or devolve
+        if (currentLifeIndex < lifeTimes.Length && elapsedTime > lifeTimes[currentLifeIndex])
+        {
+            currentLifeIndex++;
+            player.Evolve();
+        } else if (currentLifeIndex > 0 && elapsedTime < lifeTimes[currentLifeIndex])
+        {
+            currentLifeIndex--;
+            player.Devolve();
+        }
     }
 
     public void OnLevelFinished()
