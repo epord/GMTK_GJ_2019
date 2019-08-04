@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsNeeded: 1
-  disabledSprite: {fileID: 21300000, guid: 3a0ccff20089ee64c84d7e9fea4d8ff6, type: 3}
-  enabledSprite: {fileID: 21300000, guid: 68596aec713c84f3cb882772e296e1ff, type: 3}
+  disabledSprite: {fileID: 21300000, guid: af673d8c74ec75948b3d328ec687b426, type: 3}
+  enabledSprite: {fileID: 21300000, guid: 6ef9510ec00acea4982f14c0d9e46850, type: 3}
   gm: {fileID: 0}
 --- !u!61 &3666322972392670785
 BoxCollider2D:
