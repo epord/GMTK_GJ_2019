@@ -2253,6 +2253,7 @@ MonoBehaviour:
   oldTime: 7
   flag: {fileID: 6806091125615162050}
   nextScene: Scenes/Level2
+  rKey: {fileID: 1785420231}
 --- !u!4 &1767410879
 Transform:
   m_ObjectHideFlags: 0
@@ -2797,6 +2798,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mario
       objectReference: {fileID: 0}
+    - target: {fileID: 313922643, guid: 947d03781954d4dd88a8174795450dca, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 1767410878}
     - target: {fileID: 1602220670514305841, guid: 947d03781954d4dd88a8174795450dca,
         type: 3}
       propertyPath: m_LocalPosition.x

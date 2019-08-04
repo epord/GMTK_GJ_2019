@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public float oldTime = 10.0f;
     public LevelEnd flag;
     public string nextScene;
+    public GameObject rKey;
 
     private float[] lifeTimes = new float[3];
     private float elapsedTime = 0;
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (rKey)
+            rKey.SetActive(false);
         lifeTimes = new float[] {
             unbornTime,
             unbornTime+ babyTime,
@@ -61,6 +64,12 @@ public class GameManager : MonoBehaviour
             currentLifeIndex--;
             player.Devolve();
         }
+    }
+
+    public void  Dead()
+    {
+        if (rKey)
+            rKey.SetActive(true);
     }
 
     public void OnLevelFinished()

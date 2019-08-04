@@ -14,6 +14,7 @@ public class CharacterEvolution : MonoBehaviour
 {
     public CharacterController2D controller;
     public PlayerMovement playerMovement;
+    public GameManager gm;
 
     public float babySpeed = 40;
     public float adultSpeed = 60;
@@ -70,7 +71,10 @@ public class CharacterEvolution : MonoBehaviour
                 break;
             case CharacterState.BABY:
                 if (playerIsOverlapping())
+                {
                     EvolveState(CharacterState.DEAD);
+                    gm.Dead();
+                }
                 else
                     EvolveState(CharacterState.ADULT);
                 break;
@@ -79,6 +83,7 @@ public class CharacterEvolution : MonoBehaviour
                 break;
             case CharacterState.OLD:
                 EvolveState(CharacterState.DEAD);
+                gm.Dead();
                 break;
 
         }
