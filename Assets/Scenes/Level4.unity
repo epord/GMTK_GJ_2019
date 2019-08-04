@@ -1541,7 +1541,7 @@ MonoBehaviour:
   adultTime: 7
   oldTime: 5
   flag: {fileID: 518901195}
-  nextScene: 
+  nextScene: Scenes/Lavel1
 --- !u!4 &1921546729
 Transform:
   m_ObjectHideFlags: 0
