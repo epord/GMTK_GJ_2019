@@ -27,11 +27,17 @@ public class LevelEnd : MonoBehaviour
 
     private void Update()
     {
+
         if (itemsNeeded == 0)
         {
             GetComponent<SpriteRenderer>().sprite = enabledSprite;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (itemsNeeded == 0)
+        {
             gm.OnLevelFinished();
-            itemsNeeded--; // to enter this bock once
         }
     }
 }

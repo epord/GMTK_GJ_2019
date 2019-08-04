@@ -220,11 +220,11 @@ MonoBehaviour:
   babyJumpForce: 0
   adultJumpForce: 800
   oldJumpForce: 500
-  unbornSprite: {fileID: 21300000, guid: 02ec7d9448fe54a5cbfd45a44bd69c31, type: 3}
-  babySprite: {fileID: 21300000, guid: 6003df2165e084cf1b3b0fdc1f90f854, type: 3}
-  adultSprite: {fileID: 21300000, guid: 9f7806ae887164685a8dbe1c7c25d437, type: 3}
-  oldSprite: {fileID: 21300000, guid: aa1237c7c9c84445d8e1295eae74fd97, type: 3}
-  deadSprite: {fileID: 21300000, guid: d7567340203a043eda15185e677bc2d3, type: 3}
+  unbornSprite: {fileID: 21300000, guid: a993fed23f56c53468e14434605f79ac, type: 3}
+  babySprite: {fileID: 21300000, guid: ad9ef5383177400419b46f5fe1c6669a, type: 3}
+  adultSprite: {fileID: 21300000, guid: 9e81b5583f6a4c24cb032b4312b9965c, type: 3}
+  oldSprite: {fileID: 21300000, guid: 7410d06e0a3fa4c4c93e5e7f93ec9681, type: 3}
+  deadSprite: {fileID: 21300000, guid: 718ac8c4d9254b54e9a937baef419938, type: 3}
   unbornColliders:
   - {fileID: 6243263202571905239}
   babyColliders:

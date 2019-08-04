@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public float adultTime = 10.0f;
     public float oldTime = 10.0f;
     public LevelEnd flag;
+    public string nextScene;
 
     private float[] lifeTimes = new float[3];
     private float elapsedTime = 0;
@@ -38,6 +40,11 @@ public class GameManager : MonoBehaviour
             player.Evolve();
         }
 
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
     }
 
     public void changeTime(float amount)
@@ -58,6 +65,7 @@ public class GameManager : MonoBehaviour
 
     public void OnLevelFinished()
     {
+        SceneManager.LoadScene(nextScene);
         Debug.Log("Level Finished");
     }
 }
