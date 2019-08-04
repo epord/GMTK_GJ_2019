@@ -1620,10 +1620,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 952856706}
-  unbornTime: 2
+  unbornTime: 1
   babyTime: 7
   adultTime: 7
-  oldTime: 5
+  oldTime: 7
   flag: {fileID: 518901195}
   nextScene: Scenes/Lavel1
   rKey: {fileID: 1678708311}

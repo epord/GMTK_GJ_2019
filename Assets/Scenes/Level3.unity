@@ -4219,10 +4219,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1319705550}
-  unbornTime: 2
+  unbornTime: 1
   babyTime: 7
   adultTime: 7
-  oldTime: 5
+  oldTime: 7
   flag: {fileID: 362792762}
   nextScene: Scenes/Level4
   rKey: {fileID: 2054387029}
