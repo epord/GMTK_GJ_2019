@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: e704f05c81734da44ba945bf0d2e13de
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1388548696377890099
+    second: tipitos_0
+  - first:
+      213: -8723828445338338537
+    second: tipitos_1
+  - first:
+      213: 6888403568599779045
+    second: tipitos_2
+  - first:
+      213: 6119567426591577546
+    second: tipitos_3
+  - first:
+      213: -2548922359004134781
+    second: tipitos_4
+  - first:
+      213: 1339153279387828769
+    second: tipitos_5
+  - first:
+      213: -7721672378073958506
+    second: tipitos_6
+  - first:
+      213: 3019845560112221184
+    second: tipitos_7
+  - first:
+      213: 4345322261275451692
+    second: tipitos_8
+  - first:
+      213: 5304896575542166764
+    second: tipitos_9
+  - first:
+      213: 2416979188746013347
+    second: tipitos_10
+  - first:
+      213: 1049709729281244848
+    second: tipitos_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +76,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +106,273 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tipitos_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 837
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c82f5dd5c98b2347bc991ae68d4fe50
+      internalID: -1388548696377890099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_1
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 837
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f90a3a0c83b4374e93ddcf1b60e6d25
+      internalID: -8723828445338338537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_2
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 837
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594d14d0118bbc04391b1b9b97b395d9
+      internalID: 6888403568599779045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_3
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 837
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a980e71bfe74b814f82666a73aad2f92
+      internalID: 6119567426591577546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 503
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d11761ea05838428cd299a4ad4799e
+      internalID: -2548922359004134781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_5
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 503
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67955442b2313e044a58e8fd39a8dfc4
+      internalID: 1339153279387828769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_6
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 503
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24f4ab5ce6fdc348a955c697dde77fa
+      internalID: -7721672378073958506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_7
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 503
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39939dceffb392c438dd16d5a98f8a5e
+      internalID: 3019845560112221184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 154
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f1760b8b52abf4298e4df8a7e367a5
+      internalID: 4345322261275451692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_9
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 154
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7526f833faa2a64c90ebe2b95401d43
+      internalID: 5304896575542166764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_10
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 154
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0f5d11be76d574d9b4ea41e30885db
+      internalID: 2416979188746013347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tipitos_11
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 154
+        width: 223
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64342ea52b45764ca97f079cd40ff2a
+      internalID: 1049709729281244848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
